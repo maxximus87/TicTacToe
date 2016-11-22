@@ -66,11 +66,6 @@ post '/opponent' do
 	end
 end
 
-# post '/opponent_type' do
-# 	session[:player_2_name] = params[:player_2]
-#     redirect '/get_move'
-# end
-
 get '/player_2_name' do
     erb :player_2_name
 end
@@ -85,7 +80,7 @@ get '/play_game' do
     session[:current_player] = session[:player_1]
 	session[:current_player_name] = session[:player_1_name]
     erb :play_game, :locals => {:board => session[:board].board, :player_1_name => session[:player_1_name], :player_2_name => session[:player_2_name]}
-    #the above saves your board and lets you pull it everytime you call it?  Pushes your board into the erb.  This is why mob helps i would have spent hours on that
+    
 end
 
 post '/get_player_move' do
