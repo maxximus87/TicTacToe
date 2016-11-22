@@ -88,3 +88,8 @@ get '/play_game' do
     #the above saves your board and lets you pull it everytime you call it?  Pushes your board into the erb.  This is why mob helps i would have spent hours on that
 end
 
+post '/get_player_move' do
+	move = params[:square]
+	puts "move is #{move}"
+	end
+
