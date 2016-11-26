@@ -83,8 +83,8 @@ get '/play_game' do
     
 end
 
-post '/get_player_move' do
-	move = params[:square]
-	puts "move is #{move}"
-	end
+# post '/get_player_move' do
+# 	move = params[:square]
+# 	puts "move is #{move}"
+# 	end
 
