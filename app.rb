@@ -1,9 +1,9 @@
 require 'sinatra'
 require 'rubygems'
 require_relative 'new_board.rb'
-require_relative 'console_human.rb'
-require_relative 'random_ai.rb'
-require_relative 'sequential_ai.rb'
+require_relative 'human.rb'
+require_relative 'console_random_ai.rb'
+require_relative 'console_sequential_ai.rb'
 require_relative 'unbeatable_ai.rb'
 
 
@@ -24,11 +24,11 @@ end
 
 post '/player_1_name' do
 	session[:player_1_name] = params[:player_1]
-	session[:player_1] = console_human.new("X")
+	session[:player_1] = Console_human.new("X")
 	session[:current_player] = session[:player_1]
 	session[:current_player_name] = session[:player_1_name]
 
-    erb :opponent, :layout => :layout, :locals => { :board => session[:board].board_positions, :player_1_name => session[:player_1_name] }
+    erb :opponent_type, :layout => :layout, :locals => { :board => session[:board].board_positions, :player_1_name => session[:player_1_name] }
     # redirect '/choose_opponent'
 end
 

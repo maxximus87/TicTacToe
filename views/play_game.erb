@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html>
 <link rel = "stylesheet" href = "css/style.css">
 
 <br><p class = "textcolor2">
 <center>
 <%= player_1_name %> you will be "X", and <%= player_2_name %>, you will be "O"</br>
 NOW FIGHT!
+</center>
 
 
 
 <form action="get_move" method="post">
  <body>
         
-        <!--<table id='board'>
+       <!--  <table id='board'>
             <tr>
                 <td id='top-left'><%= board[0] %></td>
                 <td id='top-center'><%= board[1] %></td>
@@ -28,10 +27,10 @@ NOW FIGHT!
                 <td id='bottom-center'><%= board[7] %></td>
                 <td id='bottom-right'><%= board[8] %></td>
             </tr>
-        </table>-->
+        </table>
+         -->
         
-        
-            <table id='board'><center>
+                    <table id='board'><center>
                 <tr>
                     <td id='top-left'><type='submit' name="square" value='<%= board[0] %>'></td>
                     <td id='top-center'><type='submit' name="square" value='<%= board[1] %>'></td>
@@ -48,4 +47,4 @@ NOW FIGHT!
                     <td id='bottom-right'><type='submit' name="square" value='<%= board[8] %>'></td>
                 </tr>
         </table></center>
-</form>
+        </form>

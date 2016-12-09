@@ -24,6 +24,47 @@ body {
     background-attachment: fixed;
 }
 
+#board { 
+  margin: 0 auto;
+  margin-top: 4%;
+  margin-bottom: 3%;
+}
+
+#top-center, #center, #bottom-center {
+  border-left: 1px solid #1c1c1c;
+  border-right: 1px solid #1c1c1c;
+}
+
+#middle-left, #center, #middle-right {
+  border-top: 1px solid #1c1c1c;
+  border-bottom: 1px solid #1c1c1c;
+}
+
+#board tr td { 
+  width: 100px; 
+  height: 100px; 
+  font-family: Helvetica; 
+  font-size: 30px; 
+  text-align: center; 
+}
+
+.board-data {
+  background: white;
+  font-size: 30px; 
+  border: none;
+}
+
+/* Color of X placed on board and Player One */
+input[value="X"] {
+  color: blue;
+}
+
+/* Color of O placed on board and Player Two */
+input[value="O"] {
+  color: purple;
+}
+
+
 
 .myButton {
   -moz-box-shadow: 0px 10px 10px -7px #276873;

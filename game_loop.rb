@@ -1,7 +1,7 @@
 require_relative "console_game.rb"
 
 
-game = Game.new
+game = Console_game.new
 
 until game.game_over?
 

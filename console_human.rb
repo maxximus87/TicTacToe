@@ -1,4 +1,4 @@
-class Human
+class Console_human
     attr_reader :marker
 
     def initialize(marker)
@@ -6,13 +6,13 @@ class Human
     end
 
     def get_move(board)
-        puts "Yeah you, make a move."
+        puts "Please make a move(1-9): "
         move = gets.chomp.to_i
         move = move - 1
             if board[move] == "" && move >= 0
                 move
             else
-                puts "What are you? Some kind of idiot?"
+                puts "Please try again."
                 get_move(board)
             end
     end    

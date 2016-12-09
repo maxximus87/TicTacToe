@@ -2,17 +2,16 @@ class Board
 
         attr_accessor :board
         def initialize
-            # @empty_square = ""
             @board = Array.new(9, "")
+            
         end
     
-    def update(position, symbol) #this updates the space on the board.
-            # @board[position] == @empty_square
-            @board[position.to_i] = symbol
+    def update(position, marker)
+            @board[position.to_i] = marker
     end
 
     def valid_space?(position)
-        if @board[position.to_i] != ""
+        if @board[position] == "X" || @board[position] == "O"
             false
         else
             true
@@ -20,7 +19,7 @@ class Board
     end
 
     def valid_input?(position)
-        if position.to_i >= 1 && position.to_i <= 9 && position =~ (/\d/)
+        if position.to_i >= 1 && position.to_i <= 9 && position =~ (/^(\d)+$/)
             true
         else
             false
