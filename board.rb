@@ -1,17 +1,17 @@
-class Board
+class grid
 
-        attr_accessor :board
+        attr_accessor :grid
         def initialize
-            @board = Array.new(9, "")
+            @grid = Array.new(9, "")
             
         end
     
     def update(position, marker)
-            @board[position.to_i] = marker
+            @grid[position.to_i] = marker
     end
 
     def valid_space?(position)
-        if @board[position] == "X" || @board[position] == "O"
+        if @grid[position] == "X" || @grid[position] == "O"
             false
         else
             true
@@ -27,18 +27,18 @@ class Board
     end    
 
     def full_board?
-        board.count("") == 0       
+        grid.count("") == 0       
     end
 
     def winner?(symbol)
-        board[0] == symbol && board[1] == symbol && board[2] == symbol ||
-        board[3] == symbol && board[4] == symbol && board[5] == symbol ||
-        board[6] == symbol && board[7] == symbol && board[8] == symbol ||
-        board[0] == symbol && board[3] == symbol && board[6] == symbol ||
-        board[1] == symbol && board[4] == symbol && board[7] == symbol ||
-        board[2] == symbol && board[5] == symbol && board[8] == symbol ||
-        board[0] == symbol && board[4] == symbol && board[8] == symbol ||
-        board[2] == symbol && board[4] == symbol && board[6] == symbol
+        grid[0] == symbol && grid[1] == symbol && grid[2] == symbol ||
+        grid[3] == symbol && grid[4] == symbol && grid[5] == symbol ||
+        grid[6] == symbol && grid[7] == symbol && grid[8] == symbol ||
+        grid[0] == symbol && grid[3] == symbol && grid[6] == symbol ||
+        grid[1] == symbol && grid[4] == symbol && grid[7] == symbol ||
+        grid[2] == symbol && grid[5] == symbol && grid[8] == symbol ||
+        grid[0] == symbol && grid[4] == symbol && grid[8] == symbol ||
+        grid[2] == symbol && grid[4] == symbol && grid[6] == symbol
 
     end
 end
