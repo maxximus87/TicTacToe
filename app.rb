@@ -103,7 +103,7 @@ get '/make_move' do
 	move = params[:move].to_i
 	session[:board].update((move - 1), session[:current_player].marker)
 
-	erb :get_move, :locals => { :current_player => session[:current_player], :current_player_name => session[:current_player_name], :board => session[:board].board_positions }
+	erb :play_game, :locals => { :current_player => session[:current_player], :current_player_name => session[:current_player_name], :board => session[:board].board_positions }
 
 	if session[:board].winner?(session[:current_player].marker) == true
 		player_1 = session[:player_1_name]
