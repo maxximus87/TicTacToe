@@ -1,20 +1,25 @@
 require_relative "board.rb"
 require_relative "console_human.rb"
-require_relative "random_ai.rb"
-require_relative "sequential_ai.rb"
+require_relative "console_random_ai.rb"
+require_relative "console_sequential_ai.rb"
 require_relative "unbeatable_ai.rb"
 
-class Game
+class Console_game
 
     attr_accessor :board, :player_1, :player_2, :current_player
 
 def initialize
         @board = Board.new
+<<<<<<< HEAD
         @player_1 = Console_human.new("x")
         @player_2 = select_player_2
+=======
+        @player_1 = Console_human.new("X")
+        @player_2 = who_plays
+>>>>>>> ca73c1213d5d8ac2625589a2bdeb22578a0db109
         @current_player = player_2
 end
-    def select_player_2
+    def who_plays
         puts """
 
             What level of play would you like?
@@ -22,14 +27,17 @@ end
             Press   1 - Human
                     2 - Random AI
                     3 - Sequential AI
-                    4 - TIC TAC TOE MASTER
-                Then ENTER!
+                    4 - Unbeatable AI
                 """
+<<<<<<< HEAD
                 who = {1 => Console_human, 2 => RandomAi, 3 => SequentialAi, 4 => UnbeatableAi}
+=======
+                who = {1 => Human, 2 => RandomAI, 3 => SequentialAI, 4 => UnbeatableAI}
+>>>>>>> ca73c1213d5d8ac2625589a2bdeb22578a0db109
                 choice = gets.chomp.to_i
-                player = who[choice].new("o")
+                player = who[player_choice].new("O")
     end
-    # player = select_player_2 
+     
     def change_player
         if @current_player == player_1
             @current_player = player_2
@@ -39,7 +47,7 @@ end
 
     end
 
-    def print_board
+    def draw_board
         puts ""
         puts "Let's get started!'"
         puts ""

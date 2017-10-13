@@ -2,8 +2,13 @@ require 'sinatra'
 require 'rubygems'
 require_relative 'new_board.rb'
 require_relative 'human.rb'
+<<<<<<< HEAD
 require_relative 'random_ai.rb'
 require_relative 'sequential_ai.rb'
+=======
+require_relative 'console_random_ai.rb'
+require_relative 'console_sequential_ai.rb'
+>>>>>>> ca73c1213d5d8ac2625589a2bdeb22578a0db109
 require_relative 'unbeatable_ai.rb'
 
 
@@ -103,7 +108,7 @@ get '/make_move' do
 	move = params[:move].to_i
 	session[:board].update((move - 1), session[:current_player].marker)
 
-	erb :get_move, :locals => { :current_player => session[:current_player], :current_player_name => session[:current_player_name], :board => session[:board].board_positions }
+	erb :play_game, :locals => { :current_player => session[:current_player], :current_player_name => session[:current_player_name], :board => session[:board].board_positions }
 
 	if session[:board].winner?(session[:current_player].marker) == true
 		player_1 = session[:player_1_name]

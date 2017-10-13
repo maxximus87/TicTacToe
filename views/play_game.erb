@@ -1,5 +1,6 @@
 <link rel = "stylesheet" href = "css/style.css">
 
+<<<<<<< HEAD
 <br><p class = "textcolor2">
 <center>
 Okay <%= current_player_name %>, you are X. Please choose a move.<br></p>
@@ -8,6 +9,18 @@ Okay <%= current_player_name %>, you are X. Please choose a move.<br></p>
  <body>
         <center>
         <!--<table id='board'>
+=======
+<br><div class="form-container">
+    <p><%= current_player_name %> is <%= current_player.marker %>. <%= current_player_name %> it is your turn, please pick a valid place on the board.</p>
+</div>
+
+
+
+<form action="get_move" method="post">
+ <body>
+        
+       <!--  <table id='board'>
+>>>>>>> ca73c1213d5d8ac2625589a2bdeb22578a0db109
             <tr>
                 <td id='top-left'><%= board[0] %></td>
                 <td id='top-center'><%= board[1] %></td>
@@ -23,11 +36,15 @@ Okay <%= current_player_name %>, you are X. Please choose a move.<br></p>
                 <td id='bottom-center'><%= board[7] %></td>
                 <td id='bottom-right'><%= board[8] %></td>
             </tr>
+<<<<<<< HEAD
         </table>-->
         </center>
+=======
+        </table>
+         -->
+>>>>>>> ca73c1213d5d8ac2625589a2bdeb22578a0db109
         
-        
-            <table id='board'><center>
+                    <table id='board'><center>
                 <tr>
                     <td id='top-left'><type='submit' name="square" value='<%= board[0] %>'></td>
                     <td id='top-center'><type='submit' name="square" value='<%= board[1] %>'></td>
@@ -44,4 +61,8 @@ Okay <%= current_player_name %>, you are X. Please choose a move.<br></p>
                     <td id='bottom-right'><type='submit' name="square" value='<%= board[8] %>'></td>
                 </tr>
         </table></center>
+<<<<<<< HEAD
         </form>
+=======
+        </form>
+>>>>>>> ca73c1213d5d8ac2625589a2bdeb22578a0db109
