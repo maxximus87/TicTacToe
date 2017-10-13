@@ -2,13 +2,10 @@ require 'sinatra'
 require 'rubygems'
 require_relative 'new_board.rb'
 require_relative 'human.rb'
-<<<<<<< HEAD
 require_relative 'random_ai.rb'
 require_relative 'sequential_ai.rb'
-=======
 require_relative 'console_random_ai.rb'
 require_relative 'console_sequential_ai.rb'
->>>>>>> ca73c1213d5d8ac2625589a2bdeb22578a0db109
 require_relative 'unbeatable_ai.rb'
 
 
