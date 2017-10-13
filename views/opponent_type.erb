@@ -1,16 +1,19 @@
 <link rel = "stylesheet" href = "css/style.css">
 <center>
-What kind of opponent do you want?
 <div class="form-container">
-	<form action='opponent' method='post'>
-	    <p>Player <span class="player-two">Two</span> will be O</p>
+	<form action='choose_opponent' method='post'>
+	    <p>Player <span class="player-two">Two</span> will be O<br>
+		<br>
+		Choose your opponent type below:
+		</p>
 	    <select autofocus="autofocus" name='player_2'>
 	        <option value='human'>Human</option>
-	        <option value='sequential_ai'>Easy</option>
-	        <option value='random_ai'>Medium</option>
-	        <option value='unbeatable_ai'>Hard</option>
+	        <option value='random_ai'>Easy</option>
+	        <option value='unbeatable_ai'>Unbeatable</option>
 	    </select>
 	    <input type="submit" value="Submit">
 	</form>
 </div>
-</center>
+
+ 
+

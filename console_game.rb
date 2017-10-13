@@ -10,7 +10,7 @@ class Game
 
 def initialize
         @board = Board.new
-        @player_1 = Human.new("x")
+        @player_1 = Console_human.new("x")
         @player_2 = select_player_2
         @current_player = player_2
 end
@@ -25,7 +25,7 @@ end
                     4 - TIC TAC TOE MASTER
                 Then ENTER!
                 """
-                who = {1 => Human, 2 => RandomAi, 3 => SequentialAi, 4 => UnbeatableAi}
+                who = {1 => Console_human, 2 => RandomAi, 3 => SequentialAi, 4 => UnbeatableAi}
                 choice = gets.chomp.to_i
                 player = who[choice].new("o")
     end

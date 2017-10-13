@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html>
 <link rel = "stylesheet" href = "css/style.css">
 
 <br><p class = "textcolor2">
 <center>
-<%= player_1_name %> you will be "X", and <%= player_2_name %>, you will be "O"</br>
-NOW FIGHT!
-
-
-
-<form action="get_move" method="post">
+Okay <%= current_player_name %>, you are X. Please choose a move.<br></p>
+</center>
+ <form action="get_move" method="post">
  <body>
-        
+        <center>
         <!--<table id='board'>
             <tr>
                 <td id='top-left'><%= board[0] %></td>
@@ -29,6 +24,7 @@ NOW FIGHT!
                 <td id='bottom-right'><%= board[8] %></td>
             </tr>
         </table>-->
+        </center>
         
         
             <table id='board'><center>
@@ -48,4 +44,4 @@ NOW FIGHT!
                     <td id='bottom-right'><type='submit' name="square" value='<%= board[8] %>'></td>
                 </tr>
         </table></center>
-</form>
+        </form>
